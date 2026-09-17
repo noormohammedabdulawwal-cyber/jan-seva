@@ -4,6 +4,7 @@ export default function BottomNav({ activeScreen, onNavigate, t }) {
   const items = [
     { key: 'home', icon: 'home', label: t('nav-home-lbl') },
     { key: 'chat', icon: 'message-circle', label: t('nav-chat-lbl') },
+    { key: 'appointments', icon: 'calendar', label: t('myAppointments') },
     { key: 'offices', icon: 'map-pin', label: t('nav-offices-lbl') },
   ];
 

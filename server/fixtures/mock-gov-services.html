@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Seva Kendra — Services (mock)</title>
+  <!--
+    Local fixture the governmentPages scraper parses. Safe to run repeatedly:
+    never touches a real site. Swap SCRAPE_TARGET_URL to a live endpoint later.
+    Each .service block carries a stable data-id that becomes the Mongo _id.
+  -->
+</head>
+<body>
+  <h1>Seva Kendra — Government Services</h1>
+  <p class="updated">Last updated 15 Sep 2026</p>
+
+  <section id="services">
+
+    <article class="service" data-id="sync-svc-birth" data-cat="health" data-color="#3B6FE8">
+      <h2 class="f-name" data-lang="en">Birth Certificate</h2>
+      <p class="f-name" data-lang="hi">जन्म प्रमाण पत्र</p>
+      <p class="f-name" data-lang="gu">જન્મ પ્રમાણ પત્ર</p>
+
+      <p class="f-desc" data-lang="en">Official birth record issued within 21 days of a delivery.</p>
+      <p class="f-desc" data-lang="hi">जन्म के 21 दिनों के भीतर जारी आधिकारिक जन्म रिकॉर्ड।</p>
+      <p class="f-desc" data-lang="gu">જન્મના 21 દિવસની અંદર જારી થતો સત્તાવાર જન્મ રેકોર્ડ.</p>
+
+      <span class="f-fee">₹100</span>
+      <span class="f-time" data-lang="en">7–14 days</span>
+      <span class="f-time" data-lang="hi">7–14 दिन</span>
+      <span class="f-time" data-lang="gu">7–14 દિવસ</span>
+      <span class="f-timebucket">medium</span>
+      <a class="f-portal" href="https://crsorgi.gov.in/">Birth registration portal</a>
+    </article>
+
+    <article class="service" data-id="sync-svc-marriage" data-cat="certificates" data-color="#7C3AED">
+      <h2 class="f-name" data-lang="en">Marriage Certificate</h2>
+      <p class="f-name" data-lang="hi">विवाह प्रमाण पत्र</p>
+      <p class="f-name" data-lang="gu">લગ્ન પ્રમાણપત્ર</p>
+
+      <p class="f-desc" data-lang="en">Certificate of marriage registration under the Hindu Marriage Act.</p>
+      <p class="f-desc" data-lang="hi">हिंदू विवाह अधिनियम के तहत विवाह पंजीकरण का प्रमाण पत्र।</p>
+      <p class="f-desc" data-lang="gu">હિંદુ લગ્ન અધિનિયમ હેઠળ લગ્ન રજિસ્ટ્રેશનનું પ્રમાણપત્ર.</p>
+
+      <span class="f-fee">₹0</span>
+      <span class="f-time" data-lang="en">7 days</span>
+      <span class="f-time" data-lang="hi">7 दिन</span>
+      <span class="f-time" data-lang="gu">7 દિવસ</span>
+      <span class="f-timebucket">medium</span>
+      <a class="f-portal" href="https://registermarriage.gujarat.gov.in/">Marriage registration portal</a>
+    </article>
+
+    <article class="service" data-id="sync-svc-driving-licence" data-cat="transport" data-color="#2E7D32">
+      <h2 class="f-name" data-lang="en">Learner's Driving Licence</h2>
+      <p class="f-name" data-lang="hi">शिक्षार्थी ड्राइविंग लाइसेंस</p>
+      <p class="f-name" data-lang="gu">લર્નર ડ્રાઇવિંગ લાઇસન્સ</p>
+
+      <p class="f-desc" data-lang="en">Provisional licence to learn driving under supervision.</p>
+      <p class="f-desc" data-lang="hi">पर्यवेक्षण में ड्राइविंग सीखने के लिए अस्थायी लाइसेंस।</p>
+      <p class="f-desc" data-lang="gu">દેખરેખ હેઠળ ડ્રાઇવિંગ શીખવા માટે કામચલાઉ લાઇસન્સ.</p>
+
+      <span class="f-fee">₹150</span>
+      <span class="f-time" data-lang="en">2–4 weeks</span>
+      <span class="f-time" data-lang="hi">2–4 सप्ताह</span>
+      <span class="f-time" data-lang="gu">2–4 અઠવાડિયા</span>
+      <span class="f-timebucket">longer</span>
+      <a class="f-portal" href="https://parivahan.gov.in/">Parivahan portal</a>
+    </article>
+
+  </section>
+</body>
+</html>

@@ -1,9 +1,29 @@
 import Icon from './Icon';
 
 const LANGS = [
-  { code: 'en', label: 'EN' },
-  { code: 'hi', label: 'हि' },
-  { code: 'gu', label: 'ગુ' },
+  { code: 'en', name: 'English' },
+  { code: 'hi', name: 'हिन्दी' },
+  { code: 'gu', name: 'ગુજરાતી' },
+  { code: 'as', name: 'অসমীয়া' },
+  { code: 'bn', name: 'বাংলা' },
+  { code: 'brx', name: 'बोड़ो' },
+  { code: 'doi', name: 'डोगरी' },
+  { code: 'kn', name: 'ಕನ್ನಡ' },
+  { code: 'ks', name: 'کٲشُر' },
+  { code: 'kok', name: 'कोंकणी' },
+  { code: 'mai', name: 'मैथिली' },
+  { code: 'ml', name: 'മലയാളം' },
+  { code: 'mni', name: 'ꯃꯤꯇꯩꯂꯣꯟ' },
+  { code: 'mr', name: 'मराठी' },
+  { code: 'ne', name: 'नेपाली' },
+  { code: 'or', name: 'ଓଡ଼ିଆ' },
+  { code: 'pa', name: 'ਪੰਜਾਬੀ' },
+  { code: 'sa', name: 'संस्कृतम्' },
+  { code: 'sat', name: 'ᱥᱟᱱᱛᱟᱲᱤ' },
+  { code: 'sd', name: 'سنڌي' },
+  { code: 'ta', name: 'தமிழ்' },
+  { code: 'te', name: 'తెలుగు' },
+  { code: 'ur', name: 'اردو' },
 ];
 
 export default function TopBar({ lang, setLang, t }) {
@@ -65,29 +85,27 @@ export default function TopBar({ lang, setLang, t }) {
             <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 11 }}>{t('tagline')}</div>
           </div>
         </div>
-        <div style={{ display: 'flex', gap: 6 }}>
-          {LANGS.map(({ code, label }) => {
-            const active = lang === code;
-            return (
-              <button
-                key={code}
-                onClick={() => setLang(code)}
-                style={{
-                  padding: '4px 10px',
-                  borderRadius: 20,
-                  border: active ? '1.5px solid var(--saffron)' : '1.5px solid rgba(255,255,255,0.4)',
-                  background: active ? 'var(--saffron)' : 'transparent',
-                  color: active ? '#fff' : 'rgba(255,255,255,0.8)',
-                  fontSize: 12,
-                  cursor: 'pointer',
-                  fontWeight: active ? 500 : 400,
-                }}
-              >
-                {label}
-              </button>
-            );
-          })}
-        </div>
+        <select
+          value={lang}
+          onChange={(e) => setLang(e.target.value)}
+          aria-label="Select language / भाषा चुनें"
+          style={{
+            padding: '5px 8px',
+            borderRadius: 8,
+            border: '1.5px solid rgba(255,255,255,0.4)',
+            background: 'var(--navy)',
+            color: '#fff',
+            fontSize: 12,
+            maxWidth: '58%',
+            cursor: 'pointer',
+          }}
+        >
+          {LANGS.map(({ code, name, label }) => (
+            <option key={code} value={code}>
+              {name}
+            </option>
+          ))}
+        </select>
       </div>
     </>
   );
