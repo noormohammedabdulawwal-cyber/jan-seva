@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Seva Kendra — Notices (mock)</title>
+  <!--
+    Local fixture the notifications scraper parses. Safe to run repeatedly.
+    Each .notice carries a stable data-id (Mongo _id), an optional
+    data-related tying it to a service id, and a data-date (YYYY-MM-DD).
+  -->
+</head>
+<body>
+  <h1>Seva Kendra — Notices</h1>
+
+  <ul id="notices">
+
+    <li class="notice" data-id="sync-news-birth" data-related="sync-svc-birth" data-date="2026-09-16">
+      <span class="n-headline" data-lang="en">Birth certificates can now be applied for online</span>
+      <span class="n-headline" data-lang="hi">जन्म प्रमाण पत्र अब ऑनलाइन आवेदन किए जा सकते हैं</span>
+      <span class="n-headline" data-lang="gu">જન્મ પ્રમાણપત્રો માટે હવે ઓનલાઈન અરજી કરી શકાય છે</span>
+    </li>
+
+    <li class="notice" data-id="sync-news-licence-holiday" data-related="sync-svc-driving-licence" data-date="2026-09-15">
+      <span class="n-headline" data-lang="en">RTO offices closed 25–26 Sep for system upgrade</span>
+      <span class="n-headline" data-lang="hi">सिस्टम अपग्रेड के लिए 25–26 सितंबर को RTO कार्यालय बंद रहेंगे</span>
+      <span class="n-headline" data-lang="gu">સિસ્ટમ અપગ્રેડ માટે 25–26 સપ્ટેમ્બરે RTO કચેરીઓ બંધ રહેશે</span>
+    </li>
+
+    <li class="notice" data-id="sync-news-marriage-fee" data-related="sync-svc-marriage" data-date="2026-09-10">
+      <span class="n-headline" data-lang="en">Marriage registration fee waived till December</span>
+      <span class="n-headline" data-lang="hi">दिसंबर तक विवाह पंजीकरण शुल्क माफ</span>
+      <span class="n-headline" data-lang="gu">ડિસેમ્બર સુધી લગ્ન રજિસ્ટ્રેશન ફી માફ</span>
+    </li>
+
+  </ul>
+</body>
+</html>

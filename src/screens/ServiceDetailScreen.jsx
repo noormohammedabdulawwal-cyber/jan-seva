@@ -1,5 +1,4 @@
 import Icon from '../components/Icon';
-import { SERVICES } from '../data/services';
 import { docPreviewSvg } from '../utils/docPreview';
 
 function docApplies(doc, answers) {
@@ -7,8 +6,7 @@ function docApplies(doc, answers) {
   return Object.keys(doc.when).every((k) => answers[k] === doc.when[k]);
 }
 
-export default function ServiceDetailScreen({ lang, t, serviceId, answers, setAnswer, onBack, onFindOffice }) {
-  const svc = SERVICES.find((s) => s.id === serviceId);
+export default function ServiceDetailScreen({ lang, t, svc, answers, setAnswer, onBack, onFindOffice, onBookAppointment }) {
   if (!svc) return null;
 
   const svcAnswers = { ...answers };
@@ -227,6 +225,11 @@ export default function ServiceDetailScreen({ lang, t, serviceId, answers, setAn
         <button className="secondary-btn" onClick={onFindOffice}>
           <Icon name="map-pin" size={16} /> {t('officeBtn')}
         </button>
+        {onBookAppointment && (
+          <button className="secondary-btn" onClick={onBookAppointment} style={{ borderColor: 'var(--saffron)', color: 'var(--saffron)' }}>
+            <Icon name="calendar-plus" size={16} color="var(--saffron)" /> {t('bookAppt')}
+          </button>
+        )}
       </div>
     </div>
   );

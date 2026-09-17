@@ -192,6 +192,11 @@ input:focus-visible {
   gap: 6px;
 }
 
+@keyframes newsFade {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }

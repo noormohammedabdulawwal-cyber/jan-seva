@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import Icon from '../components/Icon';
-import { OFFICES } from '../data/offices';
 
 function distanceKm(lat1, lng1, lat2, lng2) {
   const R = 6371;
@@ -15,11 +14,11 @@ function distanceKm(lat1, lng1, lat2, lng2) {
   return R * c;
 }
 
-export default function OfficesScreen({ lang, t, userLocation, setUserLocation, locationStatus, setLocationStatus, onBack }) {
+export default function OfficesScreen({ lang, t, offices, userLocation, setUserLocation, locationStatus, setLocationStatus, onBack }) {
   const mapElRef = useRef(null);
   const mapRef = useRef(null);
 
-  let officeList = OFFICES.slice();
+  let officeList = (offices || []).slice();
   if (userLocation) {
     officeList = officeList
       .map((o) => ({ ...o, dist: distanceKm(userLocation.lat, userLocation.lng, o.lat, o.lng) }))

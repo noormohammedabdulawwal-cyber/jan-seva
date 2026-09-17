@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# On-disk MongoDB (mongodb-memory-server persistent store)
+.data/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
